@@ -1,15 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router } from 'react-router-dom'; // Import Router
-import store from './store'; // Adjust the path to your store.js file
-import App from './App'; // Assuming this is your main App component
+import { HashRouter as Router } from 'react-router-dom'; // Import HashRouter
+import store from './store';
+import App from './App';
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
-      <Router basename="/e-plantShopping/"> {/* Add basename here */}
+      <Router> {/* Use HashRouter */}
         <App />
       </Router>
     </Provider>
